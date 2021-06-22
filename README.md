@@ -1,6 +1,6 @@
  # task1-ROS-installation-and-configuration
 
-#### after do this step to install ROS melodic in ubuntu : 
+### after do this step to install ROS melodic in ubuntu : 
 * download virtualbox 
 * install ubuntu
 * install ROS " melodic version " 
@@ -11,6 +11,8 @@
 <p><code>$ mkdir -p ~/catkin_ws/src</code></p>
 <p><code>$ cd ~/catkin_ws/</code></p>
 <p><code>$ catkin_make</code></p>
+
+![task1backupforcatkin](https://user-images.githubusercontent.com/56357074/122817274-6097cb00-d2e0-11eb-8f71-b7657a86be21.png)
 
 #### any change in a ROS enviroment its conveinent to be added automatically to your bash session  every time a new shell is launched :
 
@@ -37,5 +39,45 @@
 #### after that compile the package by :
 
 <p><code>$ catkin_make</code></p>
+
+#### then enter to the file that is called  bashrc , this file is a script file that's executed when a user logs in.
+
+<p><code>$ sudo nano ~/.bashrc</code></p>
+
+##### and write this line at the end of this file :
+
+<p><code>source /home/rmsh/catkin_ws/devel/setup.bash</code></p>
+
+##### and save change 
+
+## to controling the motors of robot arm by Rviz : 
+
+<p><code>$ roslaunch robot_arm_pkg check_motors.launch</code></p>
+
+## to use Arduino with ROS :
+
+* install Arduino IDE :
+  -  go to [install Arduino IDE](https://www.arduino.cc/en/software) , after install Arduino IDE ,extraction and run install.sh file on terminal to make a shortcut of arduino in dsktop
+  -  install rosserial by 2 commands: 
+     - <p><code>$ sudo apt-get install ros-melodic-rosserial</code></p>
+     - <p><code>$ sudo apt-get install ros-melodic<distro>-rosserial-arduino</code></p>
+  - all previous steps is to install a nessessary packages
+  - install a ros_lib which is the package that arduino need to allow arduino to interact with ROS :
+    - you can do this step by go to arduino window and do this from setting but i make this step by commands .
+    - <p><code>$ cd arduino<sketchbook>/libraries</code></p>
+    -  ` <sketchbook> ` is a directory that the linux arduino enviroment saves your sketches .
+    - hint: you have to delete ros_lib if there are to regenerate , because if there is , that's may cause errors:
+         <p><code>$ rm -rf ros_lib</code></p>
+    - then create now a `ros_lib` directory by this command :
+         <p><code>$ rosrun rosserial_arduino make_libraries.py</code></p>
+ * identify a USB to arduino : 
+      #### devices > USB > and select a USB
+ * upload arduino code :
+   - select Arduino port
+   - change permission:
+     <p><code>	$ ls -l /dev |grep ttyUSB</code></p>
+     <p><code>	$ sudo chmod -R 777 /dev/ttyUSB0</code></p>
+   - upload the code from Arduino IDE
+
 
 
