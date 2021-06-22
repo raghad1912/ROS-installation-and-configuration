@@ -111,12 +111,23 @@
      
    * to run a moveIt , you need first Launch the setup assistant:
                   <p><code>$ roslaunch moveit_setup_assistant setup_assistant.launch</code></p>
+     
+     
+![task1p9](https://user-images.githubusercontent.com/56357074/122854624-aa060b80-d31c-11eb-906a-128118f33dfd.png)
+
    * and choose `create new ...` and select the path of arduino .urdf  and the load files 
    * to run moveit in Rviz :
                   <p><code>$ roslaunch moveit_pkg demo.launch</code></p>
+     ![task1p10](https://user-images.githubusercontent.com/56357074/122854649-b4280a00-d31c-11eb-85b2-d91044461494.png)
+
+
    * go to `Add` button and select `motion planning`
-   * to run a gazebo with moveit to simulation : 
+   * to run a gazebo with moveit which is in Rviz to simulation : 
                   <p><code>$$ roslaunch moveit_pkg demo_gazebo.launch</code></p>
+     
+     
+     ![task1p11](https://user-images.githubusercontent.com/56357074/122854675-bbe7ae80-d31c-11eb-8e36-a48f70c69574.png)
+
  
     
      
