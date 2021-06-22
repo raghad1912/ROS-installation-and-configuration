@@ -90,9 +90,15 @@
    * run a Rviz : 
           <p><code>	$ roslaunch robot_arm_pkg check_motors.launch</code></p>
 
+![task1p6](https://user-images.githubusercontent.com/56357074/122854091-df5e2980-d31b-11eb-8205-5b2a09fda15b.png)
+
+
+
    * run a gazebo :
              <p><code>	$ roslaunch robot_arm_pkg check_motors_gazebo.launch</code></p>
      
+     ![task1p7](https://user-images.githubusercontent.com/56357074/122854125-e8e79180-d31b-11eb-8cdd-34d4418a5ce2.png)
+
    * because gazebo seperate from Rviz , use this command to you can control a robot arm from joint state publisher and will simulate in gazebo : 
                   <p><code>$ rosrun robot_arm_pkg joint_states_to_gazebo.py</code></p>
    * ( hint : you may need to change permission):
