@@ -104,6 +104,9 @@
    * ( hint : you may need to change permission):
                   <p><code>$ 	$ cd catkin_ws/src/arduino_robot_arm/robot_arm_pkg/scripts</code></p>
                   <p><code>$ 	$ sudo chmod +x joint_states_to_gazebo.py</code></p>
+     
+     https://user-images.githubusercontent.com/56357074/122854373-509ddc80-d31c-11eb-8901-4046c96489d3.mp4
+
 ## controlling robot arm by moveit : 
      
    * to run a moveIt , you need first Launch the setup assistant:
