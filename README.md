@@ -60,6 +60,10 @@
 
 * install Arduino IDE :
   -  go to [install Arduino IDE](https://www.arduino.cc/en/software) , after install Arduino IDE ,extraction and run `install.sh` file on terminal to make a shortcut of arduino in dsktop
+
+
+![task1p4](https://user-images.githubusercontent.com/56357074/122844631-be410d00-d30a-11eb-8ea0-d68c0c432193.png)
+
   -  install rosserial by 2 commands: 
      - <p><code>$ sudo apt-get install ros-melodic-rosserial</code></p>
      - <p><code>$ sudo apt-get install ros-melodic<distro>-rosserial-arduino</code></p>
@@ -81,5 +85,30 @@
      <p><code>	$ sudo chmod -R 777 /dev/ttyUSB0</code></p>
    - upload the code from Arduino IDE
 
+     
+## controling the motors in simulation : 
+   * run a Rviz : 
+          <p><code>	$ roslaunch robot_arm_pkg check_motors.launch</code></p>
 
+   * run a gazebo :
+             <p><code>	$ roslaunch robot_arm_pkg check_motors_gazebo.launch</code></p>
+     
+   * because gazebo seperate from Rviz , use this command to you can control a robot arm from joint state publisher and will simulate in gazebo : 
+                  <p><code>$ rosrun robot_arm_pkg joint_states_to_gazebo.py</code></p>
+   * ( hint : you may need to change permission):
+                  <p><code>$ 	$ cd catkin_ws/src/arduino_robot_arm/robot_arm_pkg/scripts</code></p>
+                  <p><code>$ 	$ sudo chmod +x joint_states_to_gazebo.py</code></p>
+## controlling robot arm by moveit : 
+     
+   * to run a moveIt , you need first Launch the setup assistant:
+                  <p><code>$ roslaunch moveit_setup_assistant setup_assistant.launch</code></p>
+   * and choose `create new ...` and select the path of arduino .urdf  and the load files 
+   * to run moveit in Rviz :
+                  <p><code>$ roslaunch moveit_pkg demo.launch</code></p>
+   * go to `Add` button and select `motion planning`
+   * to run a gazebo with moveit to simulation : 
+                  <p><code>$$ roslaunch moveit_pkg demo_gazebo.launch</code></p>
+ 
+    
+     
 
