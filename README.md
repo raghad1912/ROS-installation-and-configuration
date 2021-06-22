@@ -54,10 +54,12 @@
 
 <p><code>$ roslaunch robot_arm_pkg check_motors.launch</code></p>
 
+![task1p2](https://user-images.githubusercontent.com/56357074/122844100-90a79400-d309-11eb-870e-e1602bef5256.png)
+
 ## to use Arduino with ROS :
 
 * install Arduino IDE :
-  -  go to [install Arduino IDE](https://www.arduino.cc/en/software) , after install Arduino IDE ,extraction and run install.sh file on terminal to make a shortcut of arduino in dsktop
+  -  go to [install Arduino IDE](https://www.arduino.cc/en/software) , after install Arduino IDE ,extraction and run `install.sh` file on terminal to make a shortcut of arduino in dsktop
   -  install rosserial by 2 commands: 
      - <p><code>$ sudo apt-get install ros-melodic-rosserial</code></p>
      - <p><code>$ sudo apt-get install ros-melodic<distro>-rosserial-arduino</code></p>
